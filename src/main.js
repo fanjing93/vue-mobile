@@ -7,6 +7,8 @@ import swiper from 'swiper';
 import Mint from 'mint-ui';
 import 'mint-ui/lib/style.css';
 
+import '../static/lib/dialog/dialog';
+
 Vue.config.productionTip = false;
 
 Vue.use(Mint);

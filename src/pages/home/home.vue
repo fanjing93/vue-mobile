@@ -73,8 +73,6 @@ export default {
 };
 </script>
 <style lang='scss' scoped>
-@import 'static/lib/css/mixin.scss';
-@import 'static/lib/css/function.scss';
 @import 'static/lib/css/swiper.min.scss';
 .home-bgc {
   // @include setBg('./img/banner.png', ptr(750), ptr(240));
