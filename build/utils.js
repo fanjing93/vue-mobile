@@ -68,7 +68,7 @@ exports.cssLoaders = function (options) {
           resources: [
             path.resolve(__dirname, '../static/lib/css/function.scss'),
             path.resolve(__dirname, '../static/lib/css/mixin.scss'),
-            path.resolve(__dirname, '../static/lib/css/common.scss'),
+            path.resolve(__dirname, '../static/lib/css/common/common.scss'),
           ],
         }
       }
