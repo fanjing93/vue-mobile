@@ -29,8 +29,6 @@ npm test
 该模板集成了全局的scss的混入和函数方法:参照static/lib/css/function&mixin
 
 集成了全局的css样式库,直接定义类就可以写样式:参照static/lib/css/common.scss
-
-集成了全局的messageBox:使用方法参照src/pages/dialogDemo/dialogDemo
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
