@@ -3,20 +3,31 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-import swiper from 'swiper';
-import Mint from 'mint-ui';
-import 'mint-ui/lib/style.css';
+import store from './store';
+import axios from 'axios';
+import Vant from 'vant';
+import 'vant/lib/vant-css/index.css';
 
-import '../static/lib/dialog/dialog';
+Vue.use(Vant);
 
 Vue.config.productionTip = false;
 
-Vue.use(Mint);
+//设置axios拦截器
+axios.interceptors.request.use(config => {
+  config.headers.cityCode = window.sessionStorage.cityCode; //jsCookie.get('cityCode')
+  return config;
+});
+axios.interceptors.response.use((response) => {
+  //处理data
+  return response;
+});
+
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 });

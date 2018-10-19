@@ -2,6 +2,8 @@
 
 > A Vue.js project
 
+![min-program-demo](https://github.com/lanzhsh/vue-mobile/blob/master/assets/img/project.jpg)
+
 ## Build Setup
 
 ``` bash

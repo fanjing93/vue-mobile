@@ -1,11 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from '@/pages/home/home';
-import Banner from '@/pages/banner';
-import List from '@/pages/list/list';
-import DialogDemo from '@/pages/dialogDemo/dialogDemo';
-import MessageBox from '@/pages/messageBox/messageBox';
-import Toast from '@/pages/toast/toast';
+
 
 Vue.use(Router);
 
@@ -15,32 +11,40 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: Home
+      component: Home,
+
+      children:[
+        {
+          path: '/main',
+          name: 'Main',
+          component: () => import('@/pages/main/main.vue')
+        },
+        {
+          path: '/classify',
+          name: 'Classify',
+          component: () => import('@/pages/classify/classify.vue')
+        },
+        {
+          path: '/product',
+          name: 'Product',
+          component: () => import('@/pages/product/product.vue')
+        },
+        {
+          path: '/shopcart',
+          name: 'Shopcart',
+          component: () => import('@/pages/shopcart/shopcart.vue')
+        },
+        {
+          path: '/my',
+          name: 'My',
+          component: () => import('@/pages/my/my.vue')
+        },
+      ]
     },
     {
-      path: '/banner',
-      name: 'Banner',
-      component: Banner
-    },
-    {
-      path: '/list',
-      name: 'List',
-      component: List
-    },
-    {
-      path: '/dialogDemo',
-      name: 'DialogDemo',
-      component: DialogDemo
-    },
-    {
-      path: '/messageBox',
-      name: 'MessageBox',
-      component: MessageBox
-    },
-    {
-      path: '/toast',
-      name: 'Toast',
-      component: Toast
-    },
+      path:'/productDetail',
+      name:'ProductDetail',
+      component:()=> import('@/pages/productDetail/productDetail.vue')
+    }
   ]
 });
